@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c1022;
+    color: #00ccff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #040717;
+    padding: 10px 20px;
+    color: #00ccff;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+    color: #00ccff;
+    font-size: 24px;
+}
+
+.menu {
+    width: 100%;
+    justify-content: center;
+    display: none;
+}
+
+.menu.show-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #00ccff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #ee00ff;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.whatsapp-button a {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button a:hover {
+    background-color: #128C7E;
+}
+
+#calculadoraRescisao {
+    background-color: #040717;
+    border-radius: 50px 5px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 70px auto 0;
+    position: relative;
+}
+
+.calculadoraRescisao_form_container {
+    background-color: #040717;
+    border-radius: 50px 5px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculadoraRescisao_form {
+    background-color: #0c1022;
+    border-radius: 50px 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input_text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: transparent;
+    border-bottom: 1px solid #00ccff;
+    color: #00ccff;
+}
+
+#calculadoraRescisao_button {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #00ccff;
+    background-color: #040717;
+    color: #00ccff;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+    text-align: center;
+}
+
+#calculadoraRescisao_button:hover {
+    background-color: #00ccff;
+    color: #040717;
+}
+
+.calculadoraRescisao_form_container {
+    position: relative;
+    z-index: 1;
+}
+
+.calculadoraRescisao_form_container::before,
+.calculadoraRescisao_form_container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate_border 6s infinite linear;
+}
+
+.calculadoraRescisao_form_container::after {
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation-delay: -3s;
+}
+
+#resultado {
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    display: none;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#resultado h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #040717;
+}
+
+#resultado p {
+    margin-bottom: 15px;
+}
+
+#resultado ul {
+    padding-left: 20px;
+}
+
+#resultado li {
+    margin-bottom: 10px;
+}
+
+#resultado.visivel {
+    display: block;
+}
+
+@keyframes rotate_border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu.show-menu ul {
+        display: flex;
+    }
+
+    #calculadoraRescisao {
+        border-radius: 0;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .calculadoraRescisao_form_container {
+        width: 400px;
+        margin: 70px auto 0;
+    }
+}
+
+.logo, .whatsapp-button {
+    margin: 0 10px;
+}

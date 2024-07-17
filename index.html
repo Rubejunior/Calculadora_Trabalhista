@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rescisão Trabalhista</title>
+    <meta name="description" content="Calculadora de Rescisão Trabalhista: Calcule seus direitos trabalhistas de forma fácil e rápida.">
+    <meta name="keywords" content="rescisão trabalhista, cálculo rescisão, direitos trabalhistas, demissão, aviso prévio, férias vencidas">
+    <meta name="author" content="Seu Nome">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/rescisao.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <meta name="google-site-verification" content="your-google-site-verification-code">
+</head>
+<body>
+    <div class="calculadoraRescisao_form_container">
+        <h2>Calculadora de Rescisão Trabalhista</h2>
+
+        <form class="calculadoraRescisao_form" id="calculadoraRescisao">
+            <div class="input_group">
+                <label for="dataInicio">Data de Início</label>
+                <input type="date" id="dataInicio" name="dataInicio" class="input_text" placeholder="Data de Início"><br><br>
+            </div>
+            <div class="input_group">
+                <label for="dataTermino">Data de Término</label>
+                <input type="date" id="dataTermino" name="dataTermino" class="input_text" placeholder="Data de Término"><br><br>
+            </div>
+            <div class="input_group">
+                <label for="motivoRescisao">Motivo da Rescisão</label>
+                <select id="motivoRescisao" name="motivoRescisao" class="input_text">
+                    <option value="semJustaCausa">Demissão sem Justa Causa</option>
+                    <option value="comJustaCausa">Demissão com Justa Causa</option>
+                    <option value="pedidoDemissao">Pedido de Demissão</option>
+                    <option value="acordoMutuo">Acordo Mútuo</option>
+                    <option value="rescisaoIndireta">Rescisão Indireta</option>
+                    <option value="terminoContrato">Término de Contrato Experiência</option>
+                </select><br><br>
+            </div>
+            <div class="input_group">
+                <label for="salarioBruto">Salário Bruto</label>
+                <input type="number" id="salarioBruto" name="salarioBruto" class="input_text" placeholder="Salário Bruto"><br><br>
+            </div>
+            <div class="input_group">
+                <label for="diasTrabalhados">Dias Trabalhados no Mês da Rescisão</label>
+                <input type="number" id="diasTrabalhados" name="diasTrabalhados" class="input_text" placeholder="Dias Trabalhados no Mês da Rescisão"><br><br>
+            </div>
+            <div class="input_group">
+                <label for="mesesTrabalhados">Meses Trabalhados no Ano da Rescisão</label>
+                <input type="number" id="mesesTrabalhados" name="mesesTrabalhados" class="input_text" placeholder="Meses Trabalhados no Ano da Rescisão"><br><br>
+            </div>
+            <div class="input_group">
+                <label for="avidoPrevio">Aviso Prévio</label>
+                <select id="avidoPrevio" name="avidoPrevio" class="input_text">
+                    <option value="trabalhado">Trabalhei todos os dias do aviso prévio</option>
+                    <option value="indenizado">Patrão me dispensou do aviso e vai pagar</option>
+                    <option value="naoTrabalhado">Não quis ou não pude cumprir o aviso</option>
+                </select><br><br>
+            </div>
+            <div class="input_group">
+                <label for="feriasVencidas">Quantidade de Férias Vencidas</label>
+                <input type="number" id="feriasVencidas" name="feriasVencidas" class="input_text" placeholder="Quantidade de Férias Vencidas"><br><br>
+            </div>
+            <input type="submit" value="Calcular Rescisão" id="calculadoraRescisao_button">
+        </form>
+
+        <h2>Resultado da Rescisão</h2>
+        <div id="resultado"></div>
+    </div>
+    
+    <script src="js/rescisao.js"></script>
+</body>
+</html>
